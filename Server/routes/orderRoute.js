@@ -1,7 +1,7 @@
 import express from 'express';
 import { placeOrder, placeOrderRazorpay, placeOrderStripe, allOrders, userOrders, updateOrderStatus, verifyStripe, verifyRazorpay } from '../controllers/orderController.js';
 import adminAuth from '../middlewares/adminAuth.js';
-import authUser from '../middlewares/Auth.js';
+import authUser from '../middlewares/auth.js';
 
 const orderRouter = express.Router();
 
