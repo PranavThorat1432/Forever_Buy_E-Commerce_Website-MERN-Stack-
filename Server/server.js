@@ -12,14 +12,26 @@ import orderRouter from './routes/orderRoute.js';
 const app = express();
 
 const allowedOrigins = [
-  "https://forever-buy-e-commerce-website-mern.vercel.app/",  // Frontend link
-  "https://forever-buy-e-commerce-admin-panel.vercel.app/"    // Admin link
+  'https://forever-buy-e-commerce-website-mern.vercel.app',   // Client (prod)
+  'https://forever-buy-e-commerce-admin-panel.vercel.app',    // Admin (prod)
+  'http://localhost:5173',                                    // Client (dev)
+  'http://localhost:5174'                                     // Admin (dev) - adjust if needed
 ];
-
 
 // Middlewares
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: (origin, callback) => {
+    // Allow requests with no origin (like mobile apps, curl) and whitelisted web origins
+    if (!origin || allowedOrigins.includes(origin)) {
+      return callback(null, true);
+    }
+    return callback(new Error('Not allowed by CORS'));
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 // API endpoints
 app.get('/', (req, res) => {    
