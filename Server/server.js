@@ -11,6 +11,11 @@ import orderRouter from './routes/orderRoute.js';
 // App Config
 const app = express();
 
+const allowedOrigins = [
+  "https://forever-buy-e-commerce-website-mern.vercel.app/",  // Frontend link
+  "https://forever-buy-e-commerce-admin-panel.vercel.app/"    // Admin link
+];
+
 
 // Middlewares
 app.use(express.json());
