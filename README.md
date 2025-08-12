@@ -242,8 +242,8 @@ This project is licensed under the [MIT License](License.md) – you’re free t
 
 | Platform              | Link                                                          |
 | --------------------- | ------------------------------------------------------------- |
-| 🌐 **Live Demo**      | [View Now](https://mern-authentication-system-kappa.vercel.app/)                        |
-| 🧑‍💻 **GitHub Repo** | [View Code](https://github.com/PranavThorat1432/MERN-Authentication-System) |
+| 🌐 **Live Demo**      | [View Now](https://forever-buy-e-commerce-website-mern.vercel.app/)                        |
+| 🧑‍💻 **GitHub Repo** | [View Code](https://github.com/PranavThorat1432/Forever_Buy_E-Commerce_Website-MERN-Stack-) |
 | 💼 **LinkedIn**       | [Connect with Me](https://www.linkedin.com/in/curiouspranavthorat/)       |
 | 📩 **Email**          | [pranavthorat95@gmail.com](mailto:pranavthorat95@gmail.com)   |
 
